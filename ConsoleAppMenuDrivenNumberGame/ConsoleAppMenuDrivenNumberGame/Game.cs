@@ -16,7 +16,7 @@ namespace ConsoleAppMenuDrivenNumberGame
         {
             int target = random.Next(1, 101);
             int guessCount = 0;
-
+            Console.WriteLine(target);
             while (true)
             {
                 int guess = PromptForGuess();
@@ -34,7 +34,7 @@ namespace ConsoleAppMenuDrivenNumberGame
                 {
                     Console.WriteLine($"Win - You guessed in {guessCount} tries");
                     UpdateBestScore(guessCount);
-
+                    break;
                 }
                 //return;
             }
@@ -45,13 +45,13 @@ namespace ConsoleAppMenuDrivenNumberGame
             while (true)
             {
                 Console.WriteLine("Input your guess from 1 to 100: ");
-                string input = Console.ReadLine() ?? "";
-                //if (int.Parse(input) >= 1 && (int.Parse(input) >= 100))
-                //{
-                //    return (int.Parse(input));
-                //}
-                if (int.TryParse(input, out int guess) && guess >= 1 && guess <= 100)
-                { return guess; }
+                int input = int.Parse(Console.ReadLine() ?? "");
+                if ((input) >= 1 && (input) <= 100)
+                {
+                    return (input);
+                }
+                //if (int.TryParse(input, out int guess) && guess >= 1 && guess <= 100)
+                //{ return guess; }
                 Console.WriteLine("Invalid input. Please enter an integer between 1 and 100.");
             }
         }
@@ -77,7 +77,7 @@ namespace ConsoleAppMenuDrivenNumberGame
         public void ResetBestScore()
         {
             bestscore = 0;
-            Console.WriteLine("Best scoer has been reset.");
+            Console.WriteLine("Best score has been reset.");
         }
     }
 }

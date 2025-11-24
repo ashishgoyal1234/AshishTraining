@@ -18,7 +18,8 @@ namespace ConsoleAppMenuDrivenNumberGame
                 Console.WriteLine("4: Exit");
                 Console.WriteLine("Chose an option and enter the option number");
 
-                string input = Console.ReadLine() ?? "";
+                string input = Console.ReadLine();
+                //string input = Console.ReadLine() ?? "";
                 string[] options = { "1", "2", "3", "4" };
                 bool valid = false;
 
