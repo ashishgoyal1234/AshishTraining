@@ -42,8 +42,8 @@ namespace ConsoleAppMenuDrivenNumberGame
                             return;
                         }
                     }
-                    Console.WriteLine("Invalid selection, please choose 1-4");
                 }
+                Console.WriteLine("Invalid selection, please choose 1-4");
             }
         }
     }
